@@ -1,0 +1,18 @@
+<div class="container">
+     <h1>Hello Angular</h1>
+     <hr>
+     <hr>
+     <button (click)="isOpen = !isOpen">Toggle Card</button>
+     <div *ngIf="isOpen; else close">
+          <app-form
+               *ngFor="let card of cards; let idx = index"
+               [userValue]="card.title"
+               [userText]="card.text"
+               [index]="card.id + 1"
+               [image]="card.image"
+          ></app-form>
+     </div>
+     <ng-template #close>
+          <p style="color: red">Карты закрытые</p>
+     </ng-template>
+</div>

@@ -1,0 +1,26 @@
+.card {
+     padding: .5rem 1rem;
+     margin-bottom: 3rem;
+     margin-top: 3rem;
+
+     h2 {
+          margin-bottom: .5rem;
+     }
+
+     .text-content {
+          font-size: 1.5rem;
+     }
+
+     & .red {
+          color: red;
+     }
+
+     & .blue {
+          color: blue;
+     }
+}
+
+button {
+     margin-top: .5rem;
+     margin-bottom: .5rem;
+}

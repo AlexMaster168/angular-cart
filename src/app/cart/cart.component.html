@@ -1,0 +1,16 @@
+<div class="card">
+     <h2 [ngStyle]="{
+           color: userValue.length < 5 ? 'red' : 'blue',
+           fontWeight: userValue.length < 10 ? 'normal' : 'bold'
+         }">{{ userValue }}</h2>
+     <p [ngClass]="userText.length > 10 ? 'blue' : 'red'" class="text-content">{{ userText }}</p>
+     <strong>Number: {{ number }} </strong>
+     <pre>{{ person | json}}</pre>
+     <strong>{{ date | date:'dd MMMM yyyy HH.mm.ss':'':'ru' }}</strong>
+     <img [src]="userImage" [alt]="userValue">
+     <br>
+     <button (click)="changeImage()">Сменить картинку</button>
+     <div>
+          <button [disabled]="disableButton" (click)="changeText()">Change Text</button>
+     </div>
+</div>

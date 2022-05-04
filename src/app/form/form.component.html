@@ -1,0 +1,8 @@
+<div class="container">
+     <app-cart [userValue]="userValue" [userText]="userText" [userImage]="image"></app-cart>
+     <p>id = {{ index }}</p>
+     <form>
+          <!--          <input type="text" (input)="inputHandler($event)" [value]="userValue">-->
+          <input type="text" [formControl]="FormControl" [(ngModel)]="userValue" (ngModelChange)="changeHandler()">
+     </form>
+</div>
